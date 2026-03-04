@@ -1,5 +1,5 @@
 #!/bin/bash
-person1=Malik
+person1=Asha
 person2=Baazil
 
 echo "$person1::How are you $person2?"
