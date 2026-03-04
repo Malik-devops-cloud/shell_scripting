@@ -4,3 +4,4 @@
 
 echo "Hello World"
 echo "moving from local to stage"
+echo "from stg to remote"
