@@ -10,3 +10,4 @@ echo "sum :$SUM"
 Leader=("Malik" "Putin" "Kim john un" "Modi" "Baazil")
 
 echo "World leaders:${Leader[@]}"
+echo "second leaders:${Leader[0]}"
