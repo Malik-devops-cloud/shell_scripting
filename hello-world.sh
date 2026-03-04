@@ -3,3 +3,4 @@
 # to comment out the line or it can be ignored by the shell script
 
 echo "Hello World"
+echo "moving from local to stage"
