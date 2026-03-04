@@ -3,3 +3,4 @@
 echo "all variables passed to the scripts: $@"
 echo "all variables passed to the scripts: $*"
 echo "script name: $0"
+echo "current working directory: $  PWD"
