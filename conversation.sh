@@ -1,9 +1,6 @@
 #!/bin/bash
-
-person1=Malik
-person2=Baazil
-
-echo "person1::How are you person2?"
-echo "person2::Hi person1, I am fine.what about you?"
-echo "person1::yeah good person2.Let's have cup of tea"
-echo "person2::sure person1"
+# deleted
+echo "Malik::How are you Baazil?"
+echo "Baazil::Hi Malik, I am fine.what about you?"
+echo "Malik::yeah good Baazil.Let's have cup of tea"
+echo "Baazil::sure Malik"
