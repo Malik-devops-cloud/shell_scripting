@@ -8,7 +8,10 @@ for (( i=1; i<=NUMBER; i++ ))
     if [ $((NUMBER % i)) eq 0]; 
     then
        COUNT=$((COUNT+1))
+     fi 
+     
   done
+
 
   if [ $COUNT -eq 2 ]; then
      echo "given number $NUMBER is prime number"
