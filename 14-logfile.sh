@@ -30,7 +30,7 @@ fi
 }
 
 dnf list installed mysql &>>$LOGS_FILE
-if [ $1 -ne 0 ]; then
+if [ $? -ne 0 ]; then
     dnf install mysql -y &>>$LOGS_FILE
     VALIDATE $? "mysql"
 else 
@@ -38,7 +38,7 @@ else
 fi
 
 dnf list installed nginx &>>$LOGS_FILE
-if [ $1 -ne 0 ]; then
+if [ $? -ne 0 ]; then
    dnf install nginx -y &>>$LOGS_FILE
    VALIDATE $? "nginx"
 else 
@@ -46,7 +46,7 @@ else
 fi
 
 dnf list installed python3 &>>$LOGS_FILE
-if [ $1 -ne 0 ]; then
+if [ $? -ne 0 ]; then
    dnf install python3 -y &>>$LOGS_FILE
    VALIDATE $? "python3" 
 else 
