@@ -13,7 +13,7 @@ SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
-echo "script executing at:$(date)"
+echo "script executing at: $(date)" | tee -a $LOGS_FILE
 
 if [ $USERID -ne 0 ]; then
    echo "error::please run this script with root previlage"
@@ -22,10 +22,10 @@ fi
 
 VALIDATE() { 
 if [ $1 -ne 0 ]; then
-   echo -e "error::installing $2  $R failure $N"
+   echo -e "error::installing $2  $R failure $N" | tee -a $LOGS_FILE
    exit 1
 else
-   echo -e "installing $2 is $G success $N"
+   echo -e "installing $2 is $G success $N" | tee -a $LOGS_FILE
 fi   
 }
 
@@ -34,7 +34,7 @@ if [ $? -ne 0 ]; then
     dnf install mysql -y &>>$LOGS_FILE
     VALIDATE $? "mysql"
 else 
-    echo -e "mysql already installed ... $Y skipping $N"    
+    echo -e "mysql already installed ... $Y skipping $N" | tee -a $LOGS_FILE
 fi
 
 dnf list installed nginx &>>$LOGS_FILE
@@ -42,7 +42,7 @@ if [ $? -ne 0 ]; then
    dnf install nginx -y &>>$LOGS_FILE
    VALIDATE $? "nginx"
 else 
-    echo -e "nginx already installed ... $Y skipping $N"    
+    echo -e "nginx already installed ... $Y skipping $N" | tee -a $LOGS_FILE   
 fi
 
 dnf list installed python3 &>>$LOGS_FILE
@@ -50,5 +50,5 @@ if [ $? -ne 0 ]; then
    dnf install python3 -y &>>$LOGS_FILE
    VALIDATE $? "python3" 
 else 
-    echo -e "python3 already installed ... $Y skipping $N"    
+    echo -e "python3 already installed ... $Y skipping $N" | tee -a $LOGS_FILE  
 fi   
