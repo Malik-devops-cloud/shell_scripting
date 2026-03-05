@@ -10,7 +10,7 @@ N="\e[37m"
 
 LOGS_FOLDER=/var/log/shell-script
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
-LOGS_FILE=($LOGS_FOLDER/$SCRIPT_NAME.log)
+LOGS_FILE=$LOGS_FOLDER/$SCRIPT_NAME.log
 
 mkdir -p $LOGS_FILE
 echo "script executing at:$(date)"
