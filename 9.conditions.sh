@@ -3,7 +3,7 @@
 NUMBER=$1
 COUNT=0
 
-for ((i=1; i<=NUMBER; i++))
+for (( i=1; i<=NUMBER; i++ ))
  do 
     if [ $((NUMBER % i)) eq 0]; then
     then
