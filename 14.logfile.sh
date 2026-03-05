@@ -18,7 +18,7 @@ echo "script executing at:$(date)"
 if [ $USERID -ne 0 ]; then
    echo "error::please run this script with root previlage"
    exit 1
-fi   mkdir -p "/var/log/shell-script"
+fi   
 
 VALIDATE() { 
 if [ $1 -ne 0 ]; then
