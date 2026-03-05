@@ -12,7 +12,7 @@ LOGS_FOLDER=/var/log/shell-script
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
-mkdir -p $LOGS_FILE
+mkdir -p $LOGS_FOLDER
 echo "script executing at:$(date)"
 
 if [ $USERID -ne 0 ]; then
