@@ -37,6 +37,7 @@ for package in $@
      if [ $? -ne 0]; then
         dnf install $package -y &>>$LOGS_FILE
         validate $? "$package"
-   else 
+     else 
         echo "$package is already installed"
-done    
+     fi    
+ done    
